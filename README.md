@@ -1,7 +1,7 @@
 # Flights_App
 
-Aplikacja Flights napisana przy użyciu języku Java i frameworku Spring jako projekt grupowy na studiach.
-
+Aplikacja Flights napisana przy użyciu języku Java i frameworku Spring jako projekt grupowy na studiach. <div style="page-break-after: always;"></div>
+Aplikacja służy do obsługi lotów z poziomu lini lotniczych oraz rezerwacji lotów z poziomu klienta.
 Krótka dokumentacja przedstawiająca strukture aplikacji. <div style="page-break-after: always;"></div>
 <b>1. Model danych</b>
 <img src="photos/image1.png">
