@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!-- Widok formularza do dodawania klientów -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.ki.lab.to.yourflights.controller.AddCustomerController">
+    <GridPane alignment="center" hgap="10.0" layoutX="300.0" layoutY="83.0" prefHeight="530.0" prefWidth="680.0" vgap="5.0" AnchorPane.bottomAnchor="187.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0">
+        <padding><Insets bottom="10.0" left="10.0" right="10.0" top="10.0" /></padding>
+        <Label text="First Name:" GridPane.rowIndex="2">
+          <font>
+             <Font size="14.0" />
+          </font></Label>
+        <Label text="Last Name:" GridPane.rowIndex="4">
+          <font>
+             <Font size="14.0" />
+          </font></Label>
+        <Label text="Country:" GridPane.rowIndex="6">
+          <font>
+             <Font size="14.0" />
+          </font></Label>
+        <Label text="City:" GridPane.rowIndex="8">
+          <font>
+             <Font size="14.0" />
+          </font></Label>
+        <Label text="Street Name:" GridPane.rowIndex="10">
+          <font>
+             <Font size="14.0" />
+          </font></Label>
+        <Label text="Postal code:" GridPane.rowIndex="12">
+          <font>
+             <Font size="14.0" />
+          </font></Label>
+        <Label text="Phone Number:" GridPane.rowIndex="14">
+          <font>
+             <Font size="14.0" />
+          </font></Label>
+        <Label text="Email Address:" GridPane.rowIndex="16">
+          <font>
+             <Font size="14.0" />
+          </font></Label>
+        <Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="19" />
+       <Label fx:id="firstNameValidationLabel" prefHeight="17.0" prefWidth="385.0" textFill="#d0454c" GridPane.columnSpan="2" GridPane.rowIndex="3">
+          <GridPane.margin>
+             <Insets />
+          </GridPane.margin>
+       </Label>
+       <Label fx:id="lastNameValidationLabel" prefHeight="17.0" prefWidth="386.0" textFill="#d0454c" GridPane.columnSpan="2" GridPane.rowIndex="5">
+          <GridPane.margin>
+             <Insets />
+          </GridPane.margin>
+       </Label>
+       <Label fx:id="countryValidationLabel" prefHeight="17.0" prefWidth="386.0" textFill="#d0454c" GridPane.columnSpan="2" GridPane.rowIndex="7">
+          <GridPane.margin>
+             <Insets />
+          </GridPane.margin>
+       </Label>
+       <Label fx:id="cityValidationLabel" prefHeight="17.0" prefWidth="385.0" textFill="#d0454c" GridPane.columnSpan="2147483647" GridPane.rowIndex="9">
+          <GridPane.margin>
+             <Insets />
+          </GridPane.margin>
+       </Label>
+       <Label fx:id="streetValidationLabel" prefHeight="17.0" prefWidth="387.0" textFill="#d0454c" GridPane.columnSpan="2147483647" GridPane.rowIndex="11">
+          <GridPane.margin>
+             <Insets />
+          </GridPane.margin>
+       </Label>
+       <Label fx:id="postalCodeValidationLabel" prefHeight="17.0" prefWidth="388.0" textFill="#d0454c" GridPane.columnSpan="2147483647" GridPane.rowIndex="13">
+          <GridPane.margin>
+             <Insets />
+          </GridPane.margin>
+       </Label>
+       <Label fx:id="phoneNumberValidationLabel" prefHeight="17.0" prefWidth="388.0" textFill="#d0454c" GridPane.columnSpan="2147483647" GridPane.rowIndex="15">
+          <GridPane.margin>
+             <Insets />
+          </GridPane.margin>
+       </Label>
+       <Label fx:id="emailAddressValidationLabel" prefHeight="17.0" prefWidth="388.0" textFill="#d0454c" GridPane.columnSpan="2147483647" GridPane.rowIndex="17">
+          <GridPane.margin>
+             <Insets bottom="10.0" />
+          </GridPane.margin>
+       </Label>
+       <JFXButton disable="true" prefHeight="51.0" prefWidth="416.0" text="Enter customer details" textAlignment="CENTER" GridPane.columnSpan="2147483647">
+          <font>
+             <Font size="24.0" />
+          </font>
+       </JFXButton>
+       <JFXTextField fx:id="firstName" focusColor="#1d3557" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+       <JFXTextField fx:id="lastName" focusColor="#1d3557" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+       <JFXTextField fx:id="country" focusColor="#1d3557" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+       <JFXTextField fx:id="city" focusColor="#1d3557" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+       <JFXTextField fx:id="street" focusColor="#1d3557" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+       <JFXTextField fx:id="postalCode" focusColor="#1d3557" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+       <JFXTextField fx:id="phoneNumber" focusColor="#1d3557" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+       <JFXTextField fx:id="emailAddress" focusColor="#1d3557" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+       <columnConstraints>
+          <ColumnConstraints maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+          <ColumnConstraints maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+       </columnConstraints>
+       <rowConstraints>
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+       </rowConstraints>
+    </GridPane>
+   <AnchorPane layoutX="484.0" layoutY="586.0" prefHeight="60.0" prefWidth="680.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0">
+      <children>
+      
+                 <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#showCustomersView" prefHeight="60.0" prefWidth="200.0" ripplerFill="#95353a" style="-fx-border-color: #D0454C; -fx-border-width: 2px;" text="Cancel" textAlignment="CENTER" AnchorPane.leftAnchor="120.0">
+               <font>
+                   <Font size="18.0" />
+               </font>
+               <cursor>
+                   <Cursor fx:constant="HAND" />
+               </cursor>
+           </JFXButton>
+          <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="231.0" onAction="#handleSubmitButtonAction" prefHeight="60.0" prefWidth="200.0" ripplerFill="#276738" style="-fx-background-color: #529E66;" text="Submit" textFill="WHITE" AnchorPane.rightAnchor="120.0">
+             <font>
+                <Font size="18.0" />
+             </font>
+             <cursor>
+                <Cursor fx:constant="HAND" />
+             </cursor>
+          </JFXButton>
+      </children>
+   </AnchorPane>
+</AnchorPane>

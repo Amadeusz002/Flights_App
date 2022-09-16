@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.ki.lab.to.yourflights.controller.NavigationController">
+    <AnchorPane fx:id="componentPane" layoutX="220.0" prefHeight="800.0" prefWidth="1060.0" />
+   <VBox prefHeight="800.0" prefWidth="220.0">
+      <children>
+          <VBox fx:id="userAvatar" prefHeight="220.0" prefWidth="220.0" style="-fx-background-color: #1d3557;" />
+          <VBox alignment="TOP_CENTER" prefHeight="420.0" prefWidth="220.0" style="-fx-background-color: #1d3557;">
+              <children>
+                  <JFXButton alignment="CENTER" contentDisplay="CENTER" onAction="#showMainView" prefHeight="60.0" prefWidth="220.0" ripplerFill="#0582ca" text="Home" textAlignment="CENTER" textFill="WHITE">
+                      <font>
+                          <Font size="18.0" />
+                      </font>
+                      <cursor>
+                          <Cursor fx:constant="HAND" />
+                      </cursor>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" contentDisplay="CENTER" onAction="#showAirlinesView" prefHeight="60.0" prefWidth="300.0" ripplerFill="#0582ca" text="Airlines" textAlignment="CENTER" textFill="WHITE">
+                      <font>
+                          <Font size="18.0" />
+                      </font>
+                      <cursor>
+                          <Cursor fx:constant="HAND" />
+                      </cursor>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" contentDisplay="CENTER" onAction="#showFlightsView" prefHeight="60.0" prefWidth="300.0" ripplerFill="#0582ca" text="Flights" textAlignment="CENTER" textFill="WHITE">
+                      <font>
+                          <Font size="18.0" />
+                      </font>
+                      <cursor>
+                          <Cursor fx:constant="HAND" />
+                      </cursor>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" contentDisplay="CENTER" onAction="#showCustomersView" prefHeight="60.0" prefWidth="300.0" ripplerFill="#0582ca" text="Customers" textAlignment="CENTER" textFill="WHITE">
+                      <font>
+                          <Font size="18.0" />
+                      </font>
+                      <cursor>
+                          <Cursor fx:constant="HAND" />
+                      </cursor>
+                  </JFXButton>
+              </children>
+          </VBox>
+         <VBox alignment="CENTER" prefHeight="160.0" prefWidth="220.0" style="-fx-background-color: #1d3557;">
+            <children>
+               <JFXButton fx:id="buttonLogin" layoutX="923.0" layoutY="34.0" onAction="#showLoginView" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: #1d3557;" text="Login" textFill="WHITE">
+                  <font>
+                     <Font size="19.0" />
+                  </font>
+               </JFXButton>
+               <JFXButton fx:id="buttonLogout" layoutX="923.0" layoutY="34.0" onAction="#handleLogout" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: #1d3557;" text="Logout" textFill="WHITE">
+                  <font>
+                     <Font size="19.0" />
+                  </font>
+               </JFXButton>
+            </children>
+         </VBox>
+      </children>
+   </VBox>
+</AnchorPane>

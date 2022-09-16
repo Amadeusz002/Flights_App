@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!-- Widok tabeli przewoźników -->
+
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.ki.lab.to.yourflights.controller.AirlinesViewController">
+    <AnchorPane layoutX="220.0" prefHeight="800.0" prefWidth="1060.0">
+        <JFXButton layoutX="923.0" layoutY="34.0" onAction="#handleLogout" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: #1d3557;" text="Log Out" textFill="WHITE">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </JFXButton>
+        <children>
+            <JFXTreeTableView fx:id="airlinesTableView" layoutX="48.0" layoutY="163.0" prefHeight="520.0" prefWidth="1000.0" style="-fx-border-color: #1d3557;" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="200.0">
+                <columns>
+                    <TreeTableColumn fx:id="nameColumn" prefWidth="135.0" text="Name" />
+                    <TreeTableColumn fx:id="countryColumn" prefWidth="135.0" text="Country" />
+                    <TreeTableColumn fx:id="descriptionColumn" prefWidth="729.0" text="Description" />
+                </columns>
+            </JFXTreeTableView>
+            <Text layoutX="30.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Airlines" wrappingWidth="220.0">
+                <font>
+                    <Font size="48.0" />
+                </font>
+            </Text>
+            <TilePane hgap="40.0" layoutX="30.0" layoutY="111.0" prefHeight="50.0" prefWidth="1005.0">
+                <children>
+                    <VBox spacing="5.0">
+                        <children>
+                            <Label text="Name:">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <JFXTextField fx:id="nameInput" />
+                        </children>
+                        <padding>
+                            <Insets top="3.0" />
+                        </padding>
+                        <opaqueInsets>
+                            <Insets />
+                        </opaqueInsets>
+                    </VBox>
+                    <VBox spacing="5.0">
+                        <children>
+                            <Label text="Country:">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <JFXComboBox fx:id="countryPicker" editable="false" prefHeight="26.0" prefWidth="133.0" />
+                        </children>
+                        <padding>
+                            <Insets top="2.0" />
+                        </padding>
+                    </VBox>
+                    <JFXButton fx:id="filtersResetButton" alignment="CENTER" onAction="#resetFilters" prefHeight="38.0" prefWidth="122.0" style="-fx-background-color: #9a031e;" text="Reset filters" textFill="WHITE" TilePane.alignment="BOTTOM_CENTER">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </JFXButton>
+                    <VBox />
+                </children>
+            </TilePane>
+        </children>
+    </AnchorPane>
+    <VBox prefHeight="300.0" prefWidth="220.0" style="-fx-background-color: #1d3557;" />
+    <VBox alignment="TOP_CENTER" layoutY="300.0" prefHeight="500.0" prefWidth="220.0" style="-fx-background-color: #1d3557;">
+        <children>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" onAction="#showMainView" prefHeight="60.0" prefWidth="300.0" ripplerFill="#0582ca" text="Home" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </JFXButton>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="300.0" ripplerFill="#0582ca" text="Airlines" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </JFXButton>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" onAction="#showCustomersView" prefHeight="60.0" prefWidth="300.0" ripplerFill="#0582ca" text="Customers" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </JFXButton>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" onAction="#showFlightView" prefHeight="60.0" prefWidth="300.0" ripplerFill="#0582ca" text="Flights" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </JFXButton>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" onAction="#showReservation" prefHeight="60.0" prefWidth="300.0" ripplerFill="#0582ca" text="Reservations" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </JFXButton>
+        </children>
+    </VBox>
+</AnchorPane>

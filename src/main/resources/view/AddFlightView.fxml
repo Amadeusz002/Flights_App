@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!-- Widok formularza do dodawania klientów -->
+
+<?import com.jfoenix.controls.JFXTimePicker?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.ki.lab.to.yourflights.controller.AddFlightController">
+    <GridPane alignment="center" hgap="10.0" layoutX="300.0" layoutY="83.0" prefHeight="530.0" prefWidth="680.0" vgap="5.0" AnchorPane.bottomAnchor="187.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0">
+        <padding><Insets bottom="10.0" left="10.0" right="10.0" top="10.0" /></padding>
+        <Label text="Place of departure:" GridPane.rowIndex="2">
+            <font>
+                <Font size="14.0" />
+            </font></Label>
+        <Label text="Place of destination:" GridPane.rowIndex="4">
+            <font>
+                <Font size="14.0" />
+            </font></Label>
+        <Label text="Airline:" GridPane.rowIndex="6">
+            <font>
+                <Font size="14.0" />
+            </font></Label>
+        <Label text="Departure date:" GridPane.rowIndex="8">
+            <font>
+                <Font size="14.0" />
+            </font></Label>
+        <Label text="Departure time:" GridPane.rowIndex="10">
+            <font>
+                <Font size="14.0" />
+            </font></Label>
+        <Label text="Arrival date:" GridPane.rowIndex="12">
+            <font>
+                <Font size="14.0" />
+            </font></Label>
+        <Label text="Arrival time:" GridPane.rowIndex="14">
+            <font>
+                <Font size="14.0" />
+            </font></Label>
+        <Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="19" />
+        <Label fx:id="placeOfDepartureValidationLabel" prefHeight="17.0" prefWidth="385.0" textFill="#d0454c" GridPane.columnSpan="2" GridPane.rowIndex="3">
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="placeOfDestinationValidationLabel" prefHeight="17.0" prefWidth="386.0" textFill="#d0454c" GridPane.columnSpan="2" GridPane.rowIndex="5">
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="airlineNameValidationLabel" prefHeight="17.0" prefWidth="386.0" textFill="#d0454c" GridPane.columnSpan="2" GridPane.rowIndex="7">
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="departureDateValidationLabel" prefHeight="17.0" prefWidth="386.0" textFill="#d0454c" GridPane.columnSpan="2" GridPane.rowIndex="9">
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="departureTimeValidationLabel" prefHeight="17.0" prefWidth="386.0" textFill="#d0454c" GridPane.columnSpan="2" GridPane.rowIndex="11">
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="arrivalDateValidationLabel" prefHeight="17.0" prefWidth="386.0" textFill="#d0454c" GridPane.columnSpan="2" GridPane.rowIndex="13">
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="arrivalTimeValidationLabel" prefHeight="17.0" prefWidth="386.0" textFill="#d0454c" GridPane.columnSpan="2" GridPane.rowIndex="15">
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <JFXButton disable="true" prefHeight="51.0" prefWidth="416.0" text="Enter flight details" textAlignment="CENTER" GridPane.columnSpan="2147483647">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </JFXButton>
+        <JFXTextField fx:id="placeOfDeparture" focusColor="#1d3557" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <JFXTextField fx:id="placeOfDestination" focusColor="#1d3557" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <JFXComboBox fx:id="comboBox" editable="true" onMouseClicked="#setComboBox"  prefHeight="25.0" prefWidth="201.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <JFXDatePicker fx:id="departureDate" GridPane.columnIndex="1" GridPane.rowIndex="8" defaultColor="#1d3557"/>
+        <JFXTimePicker fx:id="departureTime" GridPane.columnIndex="1" GridPane.rowIndex="10" defaultColor="#1d3557"/>
+        <JFXDatePicker fx:id="arrivalDate" GridPane.columnIndex="1" GridPane.rowIndex="12" defaultColor="#1d3557"/>
+        <JFXTimePicker fx:id="arrivalTime" GridPane.columnIndex="1" GridPane.rowIndex="14" defaultColor="#1d3557"/>
+        <Label fx:id="placeOfDestinationValidation" prefHeight="17.0" prefWidth="184.0" GridPane.rowIndex="3" />
+        <Label fx:id="placeOfDepartureValidation" prefHeight="17.0" prefWidth="166.0" GridPane.rowIndex="5" />
+        <Label fx:id="airlineNameValidation" prefHeight="17.0" prefWidth="166.0" GridPane.rowIndex="7" />
+        <Label fx:id="departureDateValidation" prefHeight="17.0" prefWidth="184.0" GridPane.rowIndex="9" />
+        <Label fx:id="arrivalDateValidation" prefHeight="17.0" prefWidth="166.0" GridPane.rowIndex="13" />
+        <Label fx:id="departureTimeValidation" prefHeight="17.0" prefWidth="166.0" GridPane.rowIndex="11" />
+        <Label fx:id="arrivalTimeValidation" prefHeight="17.0" prefWidth="166.0" GridPane.rowIndex="15" />
+        <columnConstraints>
+            <ColumnConstraints maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+            <ColumnConstraints maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+    <AnchorPane layoutX="484.0" layoutY="586.0" prefHeight="60.0" prefWidth="680.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0">
+        <children>
+
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#showFlightView" prefHeight="60.0" prefWidth="200.0" ripplerFill="#95353a" style="-fx-border-color: #D0454C; -fx-border-width: 2px;" text="Cancel" textAlignment="CENTER" AnchorPane.leftAnchor="120.0">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="231.0"  onAction="#handleSubmitButtonAction" prefHeight="60.0" prefWidth="200.0" ripplerFill="#276738" style="-fx-background-color: #529E66;" text="Submit" textFill="WHITE" AnchorPane.rightAnchor="120.0">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </JFXButton>
+        </children>
+    </AnchorPane>
+</AnchorPane>
