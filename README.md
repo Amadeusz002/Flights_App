@@ -77,6 +77,8 @@ Użytkownik zalogowany jako administrator może:
 
 <b>4. Screeny z aplikacji</b> <div style="page-break-after: always;"></div>
 
+<img src="photos/image5.png">
+<img src="photos/image6.png">
 
 <b>5. Uruchamianie projektu</b>
 
