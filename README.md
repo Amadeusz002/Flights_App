@@ -75,7 +75,10 @@ Użytkownik zalogowany jako administrator może:
   
   </ul>
 
-<b>4. Uruchamianie projektu</b>
+<b>4. Screeny z aplikacji</b> <div style="page-break-after: always;"></div>
+
+
+<b>5. Uruchamianie projektu</b>
 
 Do uruchomienia i korzystania z aplikacji niezbędna jest baza danych MySql stworzona według instrukcji i uruchomiona lokalnie.
 Aby stworzyć lokalną bazę danych potrzebną do uruchomienia projektu, należy:
